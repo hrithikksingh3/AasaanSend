@@ -1,8 +1,9 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<title>AasaanSend - Receiver</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -13,29 +14,27 @@
         <p><a href="https://www.linkedin.com/in/hrithik-kumar-singh-0a4127301/" target="_blank">LinkedIn Profile</a></p>
     </div>
 	<div class="app">
-    <div class="screen join-screen active">
-        <div class="form">
-            <h2>Join a file sharing room</h2>
-            <div class="form-input">
-                <input type="text" id="join-id" placeholder="Enter Room ID">
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Join a file sharing room</h2>
+                <div class="form-input">
+                    <input type="text" id="join-id" placeholder="Enter Room ID">
+                </div>
+                <div class="form-input">
+                    <button id="receiver-start-con-btn">Connect</button>
+                </div>
+                <div class="alternate-page"><a href="index.html">Want to Send Files?</a></div>
             </div>
-            <div class="form-input">
-                <button id="receiver-start-con-btn">Connect</button>
+        </div>
+        <div class="screen fs-screen">
+            <div class="files-list">
+				<h3>Room joined, waiting for sender to send files.</h3>
+                <div class="title">Shared files:</div>
             </div>
-            <div class="alternate-page"><a href="index.html">Want to Send Files?</a></div>
         </div>
     </div>
-    <div class="screen fs-screen">
-        <div class="files-list">
-			<h3>Room joined waiting for sender to send files.</h3>
-            <div class="title">Shared files:</div>
-        </div>
-    </div>
-</div>
-</div>
 
-	<script type="text/javascript" src="socket.io/socket.io.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.1/download.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="receiver.js"></script>
 </body>
 </html>
